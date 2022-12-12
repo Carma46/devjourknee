@@ -1,0 +1,92 @@
+// Let's play a Trivia game! - Are you smarter than a 5th grader
+
+window.alert ("Let's play a Trivia game! - ARE YOU SMARTER THAN A 5TH GRADER?")
+;
+let name = window.prompt ("Before we start. What should we call you?")
+;
+// define how to play
+window.alert (" Okay "   +   name  +   " your score is currently zero. Earn one point for every correct answer. Five points you win!");
+
+let playerScore = 0;
+
+
+// write out questions
+
+let guess1 = window.prompt ("1. How many colors are there in a rainbow?");
+
+
+// check players answers
+
+if(guess1 == "seven" ) {
+   playerScore++;
+    
+    window.alert ("you are correct! "  +   name   +   "  Your score is now  "   +    playerScore);
+}
+
+else {
+    window.alert ( "Sorry, the correct answser is seven " + name + " Your score is currently " + playerScore); 
+}
+
+window.alert ("Let's move on to the next question shall we?")
+;   
+
+let guess2 = window.prompt ("2. What fruit do raisins come from?"); 
+
+
+if(guess2 == "grapes" ) {
+   playerScore++;
+    window.alert ("you are correct! "  +   name   +   "  Your score is now  "   +    playerScore );
+}
+
+else {
+    window.alert ( "Sorry, the correct answser is grapes " + name + " Your score is currently " + playerScore--); 
+}
+    
+let guess3 = window.prompt ("3. How many legs does a spider have?");
+
+if(guess3 == "eight" ) {
+   playerScore++;
+    window.alert ("you are correct! "  +   name   +   "  Your score is now  "   +    playerScore);
+}
+
+else {
+    window.alert ( "Sorry, the correct answser is eight " + name + " Your score is " + playerScore); 
+}
+
+let guess4 = window.prompt ("4. What country has the largest population?");
+
+if(guess4 == "China" ) {
+   playerScore++;
+    window.alert ("you are correct! "  +   name   +   "  Your score is now  "   +    playerScore );
+}
+
+else {
+    window.alert ( "Sorry, the correct answser is China " + name + " Your score is " + playerScore); 
+}
+
+window.alert (" This is your last chance to earn points! Make it count!")
+; 
+
+let guess5 = window.prompt ("5. Who invented the telephone?");
+
+
+if(guess5 == "Alexander Graham Bell" ) {
+   playerScore++;
+    window.alert ("you are correct! "  +   name   +   "  Your score is now  "   +    playerScore );
+}
+
+else {
+    window.alert ( "Sorry, the correct answser is Alexander Graham Bell  " + name + " Your score is " + playerScore); 
+}
+
+
+window.alert("Congratulations " +  name +  " You've completed the game! Your final score is  " + playerScore);
+
+
+
+window.prompt("Are you smarter than a 5th grader?");   
+    
+console.log (playerScore);
+
+
+
