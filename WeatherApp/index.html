@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+
+</head>
+<body>
+<header class="header">
+    <h1 style="padding: 2.5rem;"> Weather App</h1>
+    <div class="header-left">
+        <img class="weather-icon-large" src="Icons/sun.svg"
+        data-current-icon>
+        <div class="header-current-temp"><span class="tempf"></span>&deg;</div>
+    </div>
+    <div class="header-right">
+        <div class="info-group">
+            <div class="label">High</div>
+            <div><span data-current-high> 32 </span>&deg;</div>
+        </div>
+        <div class="info-group">
+            <div class="label"> Feels like High</div>
+            <div><span data-current-fl-high> 32 </span>&deg;</div>
+        </div>
+        <div class="info-group">
+            <div class="label">Wind</div>
+            <div><span class="wind"></span></span><span class="value-sub-info">mph</span></div>
+        </div>
+        <div class="info-group">
+            <div class="label">Low</div>
+            <div><span data-current-low> 32 </span>&deg;</div>
+        </div>
+        <div class="info-group">
+            <div class="label">Feels like Low</div>
+            <div><span data-current-fl-low> 32 </span>&deg;</div>
+        </div>
+        <div class="info-group">
+            <div class="label">Precip</div>
+            <div><span class="precip"></span><span class="value-sub-info">in</span></div>
+        </div>      
+
+    </div>
+</header>
+<br>
+<section class="cityName">
+    
+  <h1 class="city"></h1>
+</section>
+<section class="day-section" data-day-section>
+<div class="day-card">
+    <img src="/Icons/cloud.svg" alt="cloud" class="weather-icon"/>
+    <div class="day-card-day">Monday</div>
+    <div> 32&deg;</div>
+</div>
+
+<div class="day-card">
+    <img src="/Icons/cloud.svg" alt="cloud" class="weather-icon"/>
+    <div class="day-card-day">Tuesday</div>
+    <div> 32&deg;</div>
+</div>
+<div class="day-card">
+    <img src="/Icons/cloud.svg" alt="cloud" class="weather-icon"/>
+    <div class="day-card-day">Wednesday</div>
+    <div> 32&deg;</div>
+</div>
+<div class="day-card">
+    <img src="/Icons/cloud.svg" alt="cloud" class="weather-icon"/>
+    <div class="day-card-day">Thursday</div>
+    <div> 32&deg;</div>
+</div>
+<div class="day-card">
+    <img src="/Icons/cloud.svg" alt="cloud" class="weather-icon"/>
+    <div class="day-card-day">Friday</div>
+    <div> 32&deg;</div>
+</div>
+<div class="day-card">
+    <img src="/Icons/cloud.svg" alt="cloud" class="weather-icon"/>
+    <div class="day-card-day">Saturday</div>
+    <div> 32&deg;</div>
+</div>
+<div class="day-card">
+    <img src="/Icons/cloud.svg" alt="cloud" class="weather-icon"/>
+    <div class="day-card-day">Sunday</div>
+    <div> 32&deg;</div>
+</div>
+</section>
+
+
+
+<template id="day-card-template">
+    <div class="day-card">
+        <img data-icon class="weather-icon"/>
+        <div class="day-card-day" data-date></div>
+        <div><span data-temp></span><span>&deg;</span></div>
+    </div>
+</template>
+
+
+<br>
+<br><br>
+
+
+<section class="userInput">
+  <input id="cityInput" type="text" placeholder="City" style="width: 400px; background-color: aqua; border: 1px; font-size: larger; text-align: center;">
+  <button><span onclick=addCity class="addBtn"> Get Weather </span></button>
+</section>
+<!-- bootstrap
+<div class="col-md-10 mx-auto col-lg-5">
+    <form class="p-4 p-md-5 border rounded-3 bg-light">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="City">
+        <label for="floatingInput">City</label>
+      </div>
+      <div class="form-floating mb-3">
+      <div class="checkbox mb-3">
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit"> <span onclick=addCity> Get Weather </span></button>
+      <hr class="my-4">
+     
+    </form> 
+</div> -->
+
+
+<br>
+  <section class="userOutput">
+  <p>Temp: <span class="tempf"></span></p>
+  <p>Feels Like: <span class="feelslike"></span></p>
+  <p>Wind: <span class="wind"></span></p>
+  <p>Precip: <span class="precip"></span></p>
+</section>
+
+  <script  src="main.js"></script>
+</body>
+</html>
